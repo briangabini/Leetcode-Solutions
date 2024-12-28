@@ -1,4 +1,4 @@
-package com.bgcoding.java.p238.productofarrayexceptself;
+package com.bgcoding.java.arraysandhashing.p238.productofarrayexceptself;
 
 // 1. Brute force
 // Time Complexity: O(n^2)

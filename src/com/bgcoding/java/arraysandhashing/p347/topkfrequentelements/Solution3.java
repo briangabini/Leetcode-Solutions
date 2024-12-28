@@ -1,4 +1,4 @@
-package com.bgcoding.java.p347.topkfrequentelements;
+package com.bgcoding.java.arraysandhashing.p347.topkfrequentelements;
 
 import java.util.ArrayList;
 import java.util.HashMap;

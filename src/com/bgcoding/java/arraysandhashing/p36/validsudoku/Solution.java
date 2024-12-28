@@ -1,4 +1,4 @@
-package com.bgcoding.java.p36.validsudoku;
+package com.bgcoding.java.arraysandhashing.p36.validsudoku;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,37 +1,39 @@
-package com.bgcoding.java.p347.topkfrequentelements;
+package com.bgcoding.java.arraysandhashing.p347.topkfrequentelements;
 
 import java.util.*;
 
 // Sorting approach
-class Solution2 {
+class Solution {
     public int[] topKFrequent(int[] nums, int k) {
+
         // 1. Place in map, <num, freq>
         Map<Integer, Integer> hm = new HashMap<>();
         for (int num : nums) {
             hm.put(num, hm.getOrDefault(num, 0) + 1);
         }
 
-        // 2. Place in heap
-        // 3. Sort by freq, ascending
-        // 4. Remove the least frequent by polling
-        PriorityQueue<int[]> heap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        // 2. Place in array list
+        List<int[]> list = new ArrayList<>();
         for (Map.Entry<Integer, Integer> entry : hm.entrySet()) {
-            heap.offer(new int[]{entry.getValue(), entry.getKey()});
-            if (heap.size() > k) {
-                heap.poll();
-            }
+            // freq, num
+            list.add(new int[] {entry.getValue(), entry.getKey()});
         }
 
-        int[] res = new int[k];
+        // 3. Sort higher freq, descending
+        // positive difference means do this ordering -> b, a
+        list.sort((a, b) -> b[0] - a[0]);
+
+        // 4. Add to result set
+        int[] result = new int[k];
         for (int i = 0; i < k; i++) {
-            res[i] = Objects.requireNonNull(heap.poll())[1];
+            result[i] = list.get(i)[1];
         }
 
-        return res;
+        return result;
     }
 
     public static void main(String[] args) {
-        Solution2 solution = new Solution2();
+        Solution solution = new Solution();
 
         // Example 1
         int[] nums1 = {1, 1, 1, 2, 2, 3};
@@ -46,4 +48,3 @@ class Solution2 {
         System.out.println("Example 2 Output: " + Arrays.toString(result2)); // Output: [1]
     }
 }
-

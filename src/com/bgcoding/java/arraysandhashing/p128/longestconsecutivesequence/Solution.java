@@ -1,4 +1,4 @@
-package com.bgcoding.java.p128.longestconsecutivesequence;
+package com.bgcoding.java.arraysandhashing.p128.longestconsecutivesequence;
 
 import java.util.*;
 
@@ -30,7 +30,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution2 solution = new Solution2();
+        Solution solution = new Solution();
 
         int[] ex1 = {0, 0, 1, 3};
         System.out.println("Example 1: " + solution.longestConsecutive(ex1));

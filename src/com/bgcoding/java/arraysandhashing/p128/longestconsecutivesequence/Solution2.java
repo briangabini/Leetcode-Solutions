@@ -1,4 +1,4 @@
-package com.bgcoding.java.p128.longestconsecutivesequence;
+package com.bgcoding.java.arraysandhashing.p128.longestconsecutivesequence;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.bgcoding.java.p238.productofarrayexceptself;
+package com.bgcoding.java.arraysandhashing.p238.productofarrayexceptself;
 
 // 2. Using a prefix and suffix array
 // Time Complexity: O(n)

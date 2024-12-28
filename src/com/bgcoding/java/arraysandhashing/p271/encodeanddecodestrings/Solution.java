@@ -1,4 +1,4 @@
-package com.bgcoding.java.p271.encodeanddecodestrings;
+package com.bgcoding.java.arraysandhashing.p271.encodeanddecodestrings;
 
 import java.util.ArrayList;
 import java.util.List;
