@@ -2,6 +2,7 @@ package com.bgcoding.java.stack.p155.minstack;
 
 import java.util.Stack;
 
+// One Stack - Variation 1
 // Optimal Solution
 // Time: O(1)
 // Space: O(n)
