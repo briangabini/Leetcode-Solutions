@@ -2,19 +2,19 @@ package com.bgcoding.java.stack.p150.reverse_polish_notation;
 
 import java.util.Stack;
 
+// Using Stack
+// Optimal Solution
+// Time: O(n)
+// Space: O(n)
 public class Solution {
 
     public int evalRPN(String[] tokens) {
         Stack<Integer> operands = new Stack<>();
         int res = 0;
 
-        if (tokens.length == 1) {
-            return Integer.parseInt(tokens[0]);
-        }
-
         for (String token : tokens) {
 
-            if (!token.matches("[-+*/]")) {
+            if (!"-+*/".contains(token)) {
                 operands.push(Integer.parseInt(token));
             } else {
                 char operator = token.charAt(0);
@@ -32,6 +32,6 @@ public class Solution {
             }
         }
 
-        return res;
+        return operands.pop();
     }
 }
